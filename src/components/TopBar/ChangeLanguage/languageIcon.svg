@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583.48 583.48">
+    <circle cx="291.74" cy="291.74" r="271.74"
+            style="fill:none; stroke-miterlimit:10; stroke-width:24px;"/>
+    <ellipse cx="291.74" cy="291.74" rx="134.29" ry="271.74"
+             style="fill:none; stroke-miterlimit:10; stroke-width:24px;"/>
+    <line x1="20" y1="291.74" x2="563.48" y2="291.74"
+          style="fill:none; stroke-miterlimit:10; stroke-width:24px;"/>
+    <line x1="291.74" y1="20" x2="291.74" y2="563.48"
+          style="fill:none; stroke-miterlimit:10; stroke-width:24px;"/>
+    <path d="M505.02,460.15c-19.12-16.7-52.6-30.7-94.89-40.02-34.58-7.63-75.05-12.12-118.38-12.38-1.35-.02-2.7-.02-4.06-.02-41.67,0-80.81,3.91-114.75,10.78-42.37,8.55-76.64,21.71-97.6,37.6"
+          style="fill:none; stroke-miterlimit:10; stroke-width:24px;"/>
+    <path d="M505.02,123.33c-19.12,16.7-52.6,30.71-94.88,40.03-34.58,7.63-75.06,12.12-118.39,12.38-1.35,.02-2.7,.02-4.06,.02-41.68,0-80.82-3.91-114.76-10.78-42.37-8.56-76.63-21.72-97.59-37.61"
+          style="fill:none; stroke-miterlimit:10; stroke-width:24px;"/>
+</svg>

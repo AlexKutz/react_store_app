@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.container svg {
+    margin-right: 4px;
+    width: 1.1em;
+    height: 1.1em;
+    fill: white;
+    stroke: white;
+    fill: none;
+}

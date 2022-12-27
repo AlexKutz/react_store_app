@@ -1,0 +1,17 @@
+.container {
+    background-color: #d4e3d4;
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.logo {
+    width: 190px;
+}
+
+.leftCol {
+    display: flex;
+    align-items: center;
+}
