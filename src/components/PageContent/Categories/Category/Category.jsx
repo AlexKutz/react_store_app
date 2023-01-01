@@ -1,10 +1,10 @@
 import s from './Category.module.css'
-import { ReactComponent as Icon } from './rocket.svg'
+import { ReactComponent as Icon } from './categoryIcon.svg'
 import { forwardRef, memo } from 'react'
 
 const Category = forwardRef((props, ref) => {
   return (
-    <div className={`${s.container} ${ref ? s.selected : ''}`} ref={ref} onClick={props.clickHandler}>
+    <div className={`${s.container} ${props.selected ? s.selected : ''}`} ref={ref} onClick={props.clickHandler}>
       <Icon />
       {props.title}
     </div>
@@ -12,5 +12,5 @@ const Category = forwardRef((props, ref) => {
 })
 
 export default memo(Category, (prevProps, nextProps) => {
-  if (prevProps.ref === nextProps.ref) return true
+  return prevProps.title === nextProps.title
 })

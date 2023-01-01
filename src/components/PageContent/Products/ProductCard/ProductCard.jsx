@@ -1,6 +1,11 @@
 import s from './ProductCard.module.css'
+import defaultImage from './noImage.png'
+import ToShopingCartButton from './ToShopingCartButton/ToShopingCartButton'
 
-function ProductCard ({ id, name, category, price, image }) {
+function ProductCard ({ name, category, price, image = defaultImage }) {
+  if (!image) {
+    image = defaultImage
+  }
   return (
     <div className={s.container}>
       <div className={s.cardItem}>
@@ -10,6 +15,7 @@ function ProductCard ({ id, name, category, price, image }) {
         <div className={s.name}>{name}</div>
         <div className={s.price}>{price} $</div>
       </div>
+      <ToShopingCartButton />
     </div>
   )
 }

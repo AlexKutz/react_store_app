@@ -1,16 +1,21 @@
 .container {
     align-items: center;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     padding: 5px 10px 0 10px;
-    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .container svg {
-    width: 30px;
     height: 30px;
     margin-bottom: 8px;
+    width: 50px;
 }
 
 .selected {
+    color: rgb(246, 86, 86);
+    transition: 0.2s;
 }

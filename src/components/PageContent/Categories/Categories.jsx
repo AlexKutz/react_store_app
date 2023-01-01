@@ -1,36 +1,44 @@
 import s from './Categories.module.css'
 import Category from './Category/Category'
 import { useEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getCategories, setCurrent } from './categoriesSlice'
 
 function Categories (props) {
+  const categories = useSelector((state) => state.categories.categories)
+  const current = useSelector((state) => state.categories.current)
+  const dispatch = useDispatch()
   const highlightRef = useRef()
   const currentRef = useRef()
   useEffect(() => {
     if (currentRef.current) {
       highlightRef.current.style.width = currentRef.current.clientWidth + 'px'
       highlightRef.current.style.marginLeft = currentRef.current.offsetLeft + 'px'
-    } else {
-      highlightRef.current.hidden = true
     }
   })
+  useEffect(() => {
+    dispatch(getCategories())
+  }, [])
+  if (!categories) return 'No categories'
 
   return (
-    <div className={s.container}>
+    <div className={s.container + ' unselectable'}>
       {
-        props.categories.map((category, index) => {
-          if (props.selectedCategoryIndex === index) {
+        categories.map((category, index) => {
+          if (current === index) {
             return <Category
-              key={category.title}
-              title={category.title}
+              key={index}
+              title={category.name}
               link={category.link}
               ref={currentRef}
+              selected={true}
             />
           } else {
             return <Category
-              key={category.title}
-              title={category.title}
+              key={index}
+              title={category.name}
               link={category.link}
-              clickHandler={() => props.setCategory(index)}
+              clickHandler={() => dispatch(setCurrent(index))}
             />
           }
         })

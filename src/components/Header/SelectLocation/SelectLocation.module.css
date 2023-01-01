@@ -4,17 +4,22 @@
     display: flex;
     flex-direction: column;
     margin-left: 25px;
+    cursor: pointer;
+}
+
+.container:hover .location{
+    text-decoration: underline;
 }
 
 .location {
     font-weight: 600;
     font-size: 19px;
-    color: #262a33;;
+    color: #228c22;
 }
 
 .location svg {
     width: 18px;
-    color: #262a33;
+    stroke: #228c22;
     transform: translateY(5px);
     margin-right: 5px;
 }
